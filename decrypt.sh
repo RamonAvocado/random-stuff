@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 folder=$1
 password_file=$(./save-password.sh $folder)
