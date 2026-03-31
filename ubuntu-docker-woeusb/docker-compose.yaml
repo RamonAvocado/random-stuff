@@ -1,0 +1,20 @@
+services:
+  woeusb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: woeusb
+    privileged: true
+    stdin_open: true
+    tty: true
+
+    devices:
+      - "/dev:/host-dev/"
+
+    volumes:
+      - "${ISO_DIR}:/isos"
+
+    environment:
+      USB_DEVICE: "${USB_DEVICE}"
+
+    command: bash
