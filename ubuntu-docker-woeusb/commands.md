@@ -7,6 +7,8 @@ docker buildx build \
 
 Command to pull the image:
 
+docker pull ramonavocado/woeusb
+
 docker run \
  --name woeusb \
  --privileged \
